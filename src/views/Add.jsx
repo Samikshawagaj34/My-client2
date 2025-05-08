@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 
+
 function Add() {
     const [student,setStudents]=useState({
         id: "",
@@ -9,9 +10,13 @@ function Add() {
         age: ""
     });
 
+    
+
+
+
     const addStudent = async ()=>{
         try {
-        const response = await axios.post("http://localhost:5002/students", {
+        const response = await axios.post("https://my-server2.onrender.com/students", {
             id: student.id,
             name: student.name,
             age: student.age
