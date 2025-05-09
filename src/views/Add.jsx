@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 
 
@@ -32,8 +32,8 @@ function Add() {
         }else{
             toast.error(response.data.message);
         }
-    } catch (error) {
-        toast.error(e.response.data.message);
+    } catch (e) {
+        toast.error(response.data.message);
     }
        
     }

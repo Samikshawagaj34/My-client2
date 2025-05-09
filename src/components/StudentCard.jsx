@@ -8,7 +8,7 @@ import EditUserIcon from './../assets/editing.png';
 function StudentCard({id, name, age, loadStudents}) {
 
   const deleteStudent = async()=>{
-    const response = await axios.delete(`http://localhost:5002/students/${id}`);
+    const response = await axios.delete(`https://my-server2.onrender.com/students/${id}`);
     if(response.data.success){
       toast.success(response.data.message);
       loadStudents();
